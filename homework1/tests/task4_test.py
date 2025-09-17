@@ -2,6 +2,8 @@
 def calculate_discount(base_price, discount_percentage):
     return (base_price - (base_price * (discount_percentage / 100)))
 
+
+#########################TESTS###############################
 #ChatGPT test cases:
 def test_integer_inputs():
     assert calculate_discount(100, 20) == 80

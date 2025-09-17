@@ -25,6 +25,8 @@ def n_primes(n) -> list[int]:
 def sum_1_to_n(n):
     return sum(range(1, n + 1))
 
+
+#########################TESTS###############################
 def test_results():
     assert pos_neg_zero(3) == "positive"
     assert pos_neg_zero(-3) == "negative"

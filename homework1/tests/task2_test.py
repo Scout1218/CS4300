@@ -20,6 +20,8 @@ def is_even(n: int) -> bool:
 x,y = 5,2
 string = "hello"
 
+
+#########################TESTS###############################
 def test_datatype():
     assert isinstance(add_integers(x,y), int)
     assert isinstance(divide_integers(x,y), float)
