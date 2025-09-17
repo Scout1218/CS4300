@@ -34,11 +34,11 @@ def test_dict():
 def test_student_names_follow_regex():
     # test if student name follows a regex (e.g., only letters)
     name_pattern = re.compile(r'^[A-Za-z]+$')
-    for name in task5.students.keys():
+    for name in students.keys():
         assert name_pattern.match(name), f"Invalid name format: {name}"
 
 def test_student_ids_follow_regex():
     # test if student ID follows a regex (e.g., only digits)
     id_pattern = re.compile(r'^\d+$')
-    for student_id in task5.students.values():
+    for student_id in students.values():
         assert id_pattern.match(str(student_id)), f"Invalid ID format: {student_id}"
