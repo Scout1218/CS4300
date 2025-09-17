@@ -11,7 +11,7 @@ def n_primes(n) -> list[int]:
     primes = []
     candidate = 2
     while len(primes) < n:
-        # check if candidate is prime
+        # check if candidate is prime, trial division up to sqrt(n)
         is_prime = True
         for p in range(2, int(candidate ** 0.5) + 1):
             if candidate % p == 0:
