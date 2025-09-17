@@ -1,13 +1,35 @@
 import re
-import task5
+#task5
+# List of favorite books (title, author)
+favorite_books = [
+    ("1984", "George Orwell"),
+    ("To Kill a Mockingbird", "Harper Lee"),
+    ("The Great Gatsby", "F. Scott Fitzgerald"),
+    ("Pride and Prejudice", "Jane Austen"),
+    ("The Catcher in the Rye", "J.D. Salinger")
+]
 
-def test_first_three_books_slicing():
-    # test if first 3 of list is equal to slicing first 3
-    assert task5.favorite_books[:3] == task5.favorite_books[0:3]
+# Dictionary of student names and their IDs
+students = {
+    "Alice": 101,
+    "Bob": 102,
+    "Charlie": 103
+}
+#ChatGPT made the list and dict
 
-def test_student_database_is_dict():
-    # test if student database is a dict
-    assert isinstance(task5.students, dict)
+def first_n(list_to_return , n):
+    return list_to_return[:n]
+''''''
+
+
+def test_slicing():
+    assert first_n(favorite_books,3) == [
+        ("1984", "George Orwell"),
+        ("To Kill a Mockingbird", "Harper Lee"),
+        ("The Great Gatsby", "F. Scott Fitzgerald")]
+
+def test_dict():
+    assert isinstance(students,dict)
 
 def test_student_names_follow_regex():
     # test if student name follows a regex (e.g., only letters)
