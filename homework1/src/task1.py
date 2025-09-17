@@ -1,4 +1,7 @@
 # hello world
 def helloWorld():
-    print("Hello, World!")
+    msg = "Hello, World!"
+    print(msg)
+    return msg
+
 
