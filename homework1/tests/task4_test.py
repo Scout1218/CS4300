@@ -1,7 +1,5 @@
-#func
-def calculate_discount(base_price, discount_percentage):
-    return (base_price - (base_price * (discount_percentage / 100)))
 
+from task4 import calculate_discount
 
 #########################TESTS###############################
 #ChatGPT test cases:

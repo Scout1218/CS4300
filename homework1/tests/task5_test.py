@@ -1,4 +1,5 @@
 import re
+from task5 import first_n
 #task5
 # List of favorite books (title, author)
 favorite_books = [
@@ -16,12 +17,6 @@ students = {
     "Charlie": 103
 }
 #ChatGPT made the list and dict
-
-def first_n(list_to_return , n):
-    return list_to_return[:n]
-''''''
-
-
 
 #########################TESTS###############################
 def test_slicing():

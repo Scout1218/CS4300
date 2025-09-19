@@ -1,8 +1,4 @@
-def helloWorld():
-    msg = "Hello, World!"
-    print(msg)
-    return msg
-
+from task1 import helloWorld
 
 #########################TESTS###############################
 def test_answer():
