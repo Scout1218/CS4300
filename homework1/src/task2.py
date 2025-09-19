@@ -1,19 +1,61 @@
-# use each data type
+# int
+def add_integers(a: int, b: int) -> int:
+    """
+    Add two integers.
 
-#int
-def add_integers(a: int, b :int) -> int:
-    return (a + b)
+    Args:
+        a (int): The first integer.
+        b (int): The second integer.
 
-#floats
+    Returns:
+        int: The sum of the two integers.
+    """
+    return a + b
+
+
+# floats
 def divide_integers(a: int, b: int) -> float:
-    return (a / b)
+    """
+    Divide one integer by another.
 
-#string
+    Args:
+        a (int): The numerator.
+        b (int): The denominator.
+
+    Returns:
+        float: The result of the division.
+
+    Raises:
+        ZeroDivisionError: If b is zero.
+    """
+    return a / b
+
+
+# string
 def uppercase(string: str) -> str:
+    """
+    Convert a string to uppercase.
+
+    Args:
+        string (str): The input string.
+
+    Returns:
+        str: The uppercase version of the string.
+    """
     return string.upper()
 
-#bool
+
+# bool
 def is_even(n: int) -> bool:
-    return ((n % 2) == 0)
+    """
+    Check if an integer is even.
+
+    Args:
+        n (int): The number to check.
+
+    Returns:
+        bool: True if the number is even, False otherwise.
+    """
+    return (n % 2) == 0
 
 
