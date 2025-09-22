@@ -6,6 +6,12 @@ run PYTHONPATH=../src pytest
 
 see tests
 
+AI use citation:
+OpenAI ChatGPT 5-
+created book list and student dict for task 5
+created test cases for task 4
+wrote function docstrings
+
 
 list of tests per file:
 
