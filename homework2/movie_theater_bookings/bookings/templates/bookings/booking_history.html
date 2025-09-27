@@ -1,16 +1,15 @@
 {% extends "bookings/base.html" %}
-{% block title %}Movie List{% endblock %}
+{% block title %}My Bookings{% endblock %}
 {% block content %}
-<h2 class="mb-3">Available Movies</h2>
+<h2 class="mb-3">Booking History</h2>
 <ul class="list-group">
-  {% for movie in movies %}
-  <li class="list-group-item">
-    <h5 class="mb-1">{{ movie.title }}</h5>
-    <p class="mb-2">{{ movie.description }}</p>
-    <a class="btn btn-primary" href="{% url 'book_seat' movie.id %}">Book Now</a>
-  </li>
+  {% for b in bookings %}
+    <li class="list-group-item d-flex justify-content-between">
+      <span><strong>{{ b.movie.title }}</strong> — Seat {{ b.seat.seat_number }}</span>
+      <span class="text-muted">{{ b.booking_date }}</span>
+    </li>
   {% empty %}
-  <li class="list-group-item">No movies yet.</li>
+    <li class="list-group-item">No bookings yet.</li>
   {% endfor %}
 </ul>
 {% endblock %}
