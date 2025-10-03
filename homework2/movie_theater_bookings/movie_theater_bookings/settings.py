@@ -66,3 +66,4 @@ REST_FRAMEWORK = {
 }
 
 ROOT_URLCONF = "movie_theater_bookings.urls"
+WSGI_APPLICATION = "movie_theater_bookings.wsgi.application"
