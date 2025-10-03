@@ -64,3 +64,5 @@ STORAGES = {
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": None,
 }
+
+ROOT_URLCONF = "movie_theater_bookings.urls"
