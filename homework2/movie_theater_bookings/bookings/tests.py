@@ -93,7 +93,7 @@ class ApiTests(TestCase):
         data = r.json()
         self.assertTrue(any(m["title"] == "Tenet" for m in data))
 
-    '''def test_book_seat_success(self):
+    def test_book_seat_success(self):
         r = self.client_api.post(f"/api/seats/{self.s1.id}/book/", {"movie": self.movie.id}, format="json")
         self.assertEqual(r.status_code, status.HTTP_201_CREATED)
         self.s1.refresh_from_db()
@@ -106,4 +106,3 @@ class ApiTests(TestCase):
         # Second booking for same (movie, seat) should conflict
         r2 = self.client_api.post(f"/api/seats/{self.s2.id}/book/", {"movie": self.movie.id}, format="json")
         self.assertEqual(r2.status_code, status.HTTP_409_CONFLICT)
-'''

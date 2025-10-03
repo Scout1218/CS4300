@@ -41,6 +41,15 @@ INSTALLED_APPS = [
     'bookings',
 ]
 
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": None,
+    "DEFAULT_PARSER_CLASSES": [
+        "rest_framework.parsers.JSONParser",
+        "rest_framework.parsers.FormParser",
+        "rest_framework.parsers.MultiPartParser",
+    ],
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
