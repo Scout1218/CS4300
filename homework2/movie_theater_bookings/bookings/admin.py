@@ -14,6 +14,6 @@ class SeatAdmin(admin.ModelAdmin):
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ("movie", "seat", "user", "booking_date")
+    list_display = ("movie", "seat", "booking_date")             # removed 'user'
     list_filter = ("movie", "seat")
-    search_fields = ("user__username", "movie__title", "seat__seat_number")
+    search_fields = ("movie__title", "seat__seat_number")        # removed 'user__username'

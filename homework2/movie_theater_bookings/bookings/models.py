@@ -32,7 +32,6 @@ class Seat(models.Model):
 class Booking(models.Model):
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name="bookings")
     seat = models.ForeignKey(Seat, on_delete=models.PROTECT, related_name="bookings")
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="bookings")
     booking_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:

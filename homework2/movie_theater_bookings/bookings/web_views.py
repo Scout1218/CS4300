@@ -19,23 +19,22 @@ def book_seat(request, movie_id):
         user = request.user if request.user.is_authenticated else get_user_model().objects.get_or_create(username="demo")[0]
 
         try:
+            # bookings/web_views.py (POST branch inside book_seat)
             with transaction.atomic():
                 seat = Seat.objects.select_for_update().get(pk=seat.pk)
                 if Booking.objects.filter(movie=movie, seat=seat).exists():
-                    raise IntegrityError("already-booked-for-movie")
+                    raise IntegrityError
                 if seat.booking_status != Seat.Status.AVAILABLE:
-                    raise IntegrityError("seat-not-available")
+                    raise IntegrityError
 
                 seat.booking_status = Seat.Status.BOOKED
                 seat.save(update_fields=["booking_status"])
 
-                # use current user if logged in; otherwise a demo user
-                User = get_user_model()
-                user = request.user if request.user.is_authenticated else User.objects.get_or_create(username="demo")[0]
-
-                Booking.objects.create(movie=movie, seat=seat, user=user)
+                # REMOVE the user kwarg here:
+                Booking.objects.create(movie=movie, seat=seat)
 
             return redirect("booking_history")
+
 
 
         except IntegrityError:
