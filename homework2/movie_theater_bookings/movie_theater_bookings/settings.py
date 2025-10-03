@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "change-me")
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", ".onrender.com,localhost,127.0.0.1").split(",")
 
 # IMPORTANT: after Render gives you your URL, add it here and commit:
-CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
+CSRF_TRUSTED_ORIGINS = ["https://cs4300-hw2.onrender.com"]
 # Example later: CSRF_TRUSTED_ORIGINS = ["https://your-service.onrender.com"]
 
 # --- Installed apps ---
