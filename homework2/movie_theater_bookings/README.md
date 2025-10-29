@@ -45,3 +45,5 @@ movie_theater_bookings/
 
 Run tests with python manage.py test
 
+AI use citation:
+I used OpenAI ChatGPT 5 in order to create the HTML/CSS styles for the site, and it was used to fix errors by prompting it with the error and then implementing the fix it provided. Additionally, it was used in order to move teh application onto Render, as the database had to be changed and required refactoring.
